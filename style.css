@@ -41,7 +41,7 @@ body {
   transition: 0.4s transform ease-in-out;
   will-change: transform;
   z-index: 0;
-  background-color: rgba(233, 224, 224, 0.842);
+  background-color: greenyellow;
 }
 
 #coolBeans::after {
@@ -78,5 +78,31 @@ body {
   top: 25%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  left: 0%;
+  left: 1%;
+}
+
+h3 {
+  margin: 0;
+  position: absolute;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 1%;
+  font-family: "Ubuntu";
+  margin-top: 25%;
+  font-size: 2rem;
+}
+
+span {
+  font-family: "Ubuntu";
+  opacity: 0;
+  transition: all 0.1s ease;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 1%;
+  margin-top: 30%;
+  font-size: 2rem;
+}
+
+span.fade {
+  opacity: 1;
 }
