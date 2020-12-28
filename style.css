@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(233, 224, 224, 0.842);
+  color: black;
+  font-size: 2rem;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-family: "Ubuntu";
+  margin-left: 10rem;
+  min-height: 100vh;
+  justify-content: top;
+  flex-direction: column;
+  top: 10%;
+}
+
+.dark-mode {
+  background-color: rgb(39, 38, 38);
+  color: white;
+}
+
+#coolBeans {
+  border: 2px solid currentColor;
+  border-radius: 3rem;
+  color: black;
+  font-family: "Ubuntu";
+  font-size: 1rem;
+  font-weight: 100;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: 0.4s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+  background-color: rgba(233, 224, 224, 0.842);
+}
+
+#coolBeans::after {
+  background-color: black;
+  border-radius: 3rem;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.3s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+#coolBeans:hover::after {
+  transform: translate(0, 0);
+}
+
+#coolBeans:hover {
+  border: 2px solid transparent;
+  color: white;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+#myIntro {
+  margin: 0;
+  position: absolute;
+  top: 25%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0%;
+}
