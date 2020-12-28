@@ -15,6 +15,26 @@ function writeText() {
 
 setInterval(writeText, 100);
 
+const text12 =
+  "                                 A few of my hobbies include playing golf, basketball and chess. Be sure to checkout my Github, LinkedIn and Instagram.";
+
+let index1 = 0;
+
+function writeText12() {
+  document.getElementById("myHobbies").innerHTML =
+    "<h3>" + text12.slice(0, index) + "</h3>";
+
+  index++;
+
+  if (index1 > text12.length) {
+    return;
+  }
+}
+
+setTimeout(function () {
+  setInterval(writeText12, 100);
+}, 3000);
+
 function darkMode() {
   var doc = document.body;
   doc.classList.toggle("dark-mode");
@@ -25,30 +45,3 @@ var button = document.getElementById("coolBeans");
 button.addEventListener("click", function () {
   darkMode();
 });
-
-const text1 = document.querySelector(".fancy");
-const strText1 = text1.textContent;
-const splitText1 = strText1.split("");
-text1.textContent = "";
-
-for (let i = 0; i < splitText1.length; i++) {
-  text1.innerHTML += "<span>" + splitText1[i] + "</span>";
-}
-
-let char = 0;
-let timer = setInterval(onTick, 50);
-
-function onTick() {
-  let span = text1.querySelectorAll(`span`)[char];
-  span.classList.add(`fade`);
-  char++;
-  if (char === text1.length) {
-    complete();
-    return;
-  }
-}
-
-function complete() {
-  clearInterval(timer);
-  timer = null;
-}
